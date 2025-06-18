@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="Icono/españa.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: rgb(6, 135, 110);
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #009688;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .articulos {
+            flex: 1 1 60%;
+        }
+
+        .sidebar {
+            flex: 1 1 30%;
+        }
+
+        article {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(168, 168, 168);
+        }
+
+        article h1 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+
+        article p {
+            margin-bottom: 15px;
+        }
+
+        article hr {
+            border: none;
+            border-top: 1px solid #eee;
+        }
+
+        .button,
+        button {
+            background-color: rgb(6, 135, 110);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover,
+        button:hover {
+            background-color: #00796b;
+        }
+
+        .sidebar div {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(168, 168, 168);
+        }
+
+        .sidebar img {
+            width: 150px;       
+            height: 150px;      
+            border-radius: 50%; 
+            object-fit: cover;  
+        }
+        
+        .sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .sidebar p {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #009688;
+            font-weight: 500;
+        }
+
+        .redes ul {
+            list-style: none;
+            padding: 0;
+            display: flex;          
+            gap: 15px;
+        }
+
+        .redes ul li {
+            display: inline-block;
+        }
+
+        .redes ul li img {
+            width: 50px;
+            height: auto;
+            transition: transform 0.2s ease-in-out;
+            object-fit: cover;
+        }
+
+        .redes ul li img:hover {
+            transform: scale(1.1);
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input,
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        footer {
+            background-color: rgb(6, 135, 110);
+            margin-top: 30px;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-copyright p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-redes {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-redes img {
+            width: 25px;
+            height: 25px;
+            transition: transform 0.2s ease;
+        }
+
+        .footer-redes img:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            main{
+                padding: 20px; 
+            }
+            .container {
+                flex-direction: column;
+            }
+
+            .articulos,
+            .sidebar {
+                flex: 1 1 100%;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="posteos.html">Posteos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="../index.html">Linktree</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="articulos">
+            <article>
+                <h1>España: Mi experiencia y recomendaciones</h1>
+                <p><time datetime="2025-06-04">4 de junio de 2025 por Santiago Petroselli</time></p>
+                
+                <p>Tuve la suerte de ir a España 3 veces en mi vida: la primera en 2015, la segunda en 2018, y la más reciente en 2025. <br>
+                Para dar un poquito de contexto, en el año <strong>2002/03</strong>, no recuerdo exacto, mis dos tíos se fueron a Europa a probar suerte, como muchos otros argentinos. Empezaron en Irlanda, y luego a España, donde finalmente se asentaron.</p>
+                
+                <h2>Mi Primer Viaje</h2>
+                <p>Como dije antes, la primera vez que fui a España fue en enero del <strong>2015</strong>, a visitar a mi familia. El viaje fue principalmente a <strong>Mallorca</strong>, pero también estuvimos unos días en <strong>Ibiza</strong> y <strong>Barcelona</strong></p>
+                <p>Empezando por Mallorca, obviamente Palma es mi lugar favorito. Playas hermosas (aunque hacía mucho frío), centro histórico muy pintoresco, una catedral impactante y mucho más. <br>
+                Con mi familia nos recorrimos todos los pueblos de la isla, entre los cuales destaco mayoritariamente a Soller y Valdemossa</p>
+                <img src="Imagenes/mallorca.jpg" alt="Mallorca"/>
+
+                <p>Luego Ibiza, ¿qué se puede decir de un lugar tan de lujo? Fuimos porque uno de mis tíos estaba ahí trabajando y quería hacernos conocer el lugar. Una vez que pisás ese lugar te das cuenta porque todos los millonarios van ahí jajaja, unas playas hermosas, un mar que se disfruta, y lujo por todos lados. Está genial, pero necesitás de mucha plata para realmente disfrutar ese lugar, por eso me quedo más con otros.</p>
+                <p>Por último, Barcelona. Desde que fui a ese lugar quedé maravillado, realmente creo que es mi lugar en el mundo. Para no hacer demasiado extenso este post, voy a destacar 2 lugares. La <strong>Sagrada Familia</strong>, ese monumento al que el arquitecto Antonio Gaudí dedicó gran parte de su vida, y a día de hoy sigue sin terminarse la construcción. ¡Qué lugar!
+                Y el segundo lugar destacado, el <strong>Camp Nou</strong>, el templo del Fútbol Club Barcelona, lugar donde jugó y pude ver por única vez en mi vida al 10, a Messi.</p>
+                <img src="Imagenes/sagradafamilia.jpg" alt="Sagrada Familia"/>
+
+                <h2>La Segunda Vez</h2>
+                <p>En este viaje fuimos nuevamente a visitar a mi familia a Mallorca, pero también fuimos unos días a Madrid. Del primer lugar ya hablé por lo que voy a hablar un poquito de la capital española. ¡Me encantó! Es una ciudad vibrante, con mucha vida en las calles, terrazas llenas, y una mezcla perfecta entre lo moderno y lo histórico. Caminé por el Parque del Retiro, visité el Museo del Prado y me perdí entre las callecitas del centro.</p>
+                <img src="Imagenes/museo del prado.jpeg" alt="Museo del Prado">
+                <h2>El Viaje de mi Vida</h2>
+                <p>Hace un año y medio, fue mi primer viaje solo. Me fui nuevamente a Mallorca a visitar a mi familia, pero principalmente a trabajar con uno de mis tíos. Aprendí todo sobre como manejar un ecommerce y gracias a eso tengo mi emprendimiento actual, Atthemis. <br>
+                Me fui de las Islas Baleares a la Península durante un fin de semana a visitar unos lugares. Barcelona nuevamente, justo coincidía que mi pareja estaba ahí por un viaje familiar, por lo que me fui a pasar el día con ella, pero no los voy a seguir aburriendo con eso, sino que voy a pasar al último lugar del post.</p>
+                <p>Granada me fascinó. La Alhambra es impresionante, llena de historia y detalles que te dejan sin palabras. Me encantó caminar por el Albaicín, con sus callejones empedrados y vistas hermosas a la ciudad. La mezcla de culturas se siente en cada rincón, y las tapas gratis con la bebida fueron una sorpresa buenísima.</p>
+                <img src="Imagenes/alhambra.jpg" alt="Alhambra">
+                <p>Les agradezco profundamente por leer este post, acá abajo del voy a dejar unas fotitos de mis viajes para que chusmeen.</p>
+                
+
+                <a class="button" href="argentina.html">Anterior</a> <a class="button" href="uruguay.html">Siguiente</a>
+            </article>
+        </section>
+
+        <aside class="sidebar">
+            <div class="perfil">
+                <h2>Escrito por: Santiago Petroselli</h2>
+                <img src="Imagenes/avatar.jpg" alt="Avatar">
+                <p>Soy un simple chico de 20 años, estudiante de Negocios Digitales, emprendedor, ¡y apasionado por los viajes y comida! En este blog te cuento mis experiencias en cada lugar y mis recomendaciones.</p>
+            </div>
+
+            <div class="redes">
+                <h2>Redes y Emprendimiento</h2>
+                <ul>
+                    <li><a href="https://atthemis.com/" target="_blank" style="text-decoration: none;">
+        <img src="Imagenes/Atthemis.png" alt="Icono de Atthemis"></a></li>
+                    <li><a href="https://www.instagram.com/santi_petroselli/" target="_blank" style="text-decoration: none;">
+        <img src="Imagenes/Instagram.png" alt="Icono de Instagram"></a></li>
+                    <li><a href="https://www.linkedin.com/in/santiago-petroselli/" target="_blank" style="text-decoration: none;">
+        <img src="Imagenes/Linkedin.png" alt="Icono de LinkedIn"></a></li>
+                </ul>
+            </div>
+
+            <div class="suscripcion">
+                <h2>Uníte a la Newsletter</h2>
+                <p>Hacete parte de nuestra comunidad si querés tener novedades de viajes, recomendaciones de lugares ¡y más!</p>
+                <form action="/submit" method="post">
+                    <input id="nombre" type="text" placeholder="Nombre" required>
+                    <input id="email" type="email" placeholder="Email" required>
+                    <select name="genero" id="genero" required>
+                        <option value="" disabled selected>Género</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <button type="submit">Suscribirme</button>
+                </form>
+            </div>
+
+            <div class="posteos">
+                <ul>
+                    <li><a href="argentina.html">Argentina: Playas, Montañas y Aventuras</a></li>
+                    <li><a href="españa.html">España: ¿vale la pena?</a></li>
+                    <li><a href="uruguay.html">Uruguay: Chiquito y Acogedor</a></li>
+                    <li><a href="comidaespaña.html">Guía Gastronómica de España</a></li>
+                    <li><a href="comidauruguay.html">Guía Gastronómica de Uruguay</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-copyright">
+            <p>Hecho por Santiago Petroselli — © 2025</p>
+        </div>
+        <div class="footer-redes">
+            <a href="https://www.instagram.com/santi_petroselli/" target="_blank">
+            <img src="Imagenes/Instagram.png" alt="Icono de Instagram"></a>
+            <a href="https://www.linkedin.com/in/santiago-petroselli/" target="_blank">
+            <img src="Imagenes/Linkedin.png" alt="Icono de LinkedIn"></a>
+        </div>
+    </footer>
+
+</body>
+</html>
