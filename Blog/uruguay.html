@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="Icono/uruguay.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: rgb(6, 135, 110);
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #009688;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .articulos {
+            flex: 1 1 60%;
+        }
+
+        .sidebar {
+            flex: 1 1 30%;
+        }
+
+        article {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(168, 168, 168);
+        }
+
+        article h1 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+
+        article p {
+            margin-bottom: 15px;
+        }
+
+        article hr {
+            border: none;
+            border-top: 1px solid #eee;
+        }
+
+        .button,
+        button {
+            background-color: rgb(6, 135, 110);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover,
+        button:hover {
+            background-color: #00796b;
+        }
+
+        .sidebar div {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(168, 168, 168);
+        }
+
+        .sidebar img {
+            width: 150px;       
+            height: 150px;      
+            border-radius: 50%; 
+            object-fit: cover;  
+        }
+        
+        .sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .sidebar p {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #009688;
+            font-weight: 500;
+        }
+
+        .redes ul {
+            list-style: none;
+            padding: 0;
+            display: flex;          
+            gap: 15px;
+        }
+
+        .redes ul li {
+            display: inline-block;
+        }
+
+        .redes ul li img {
+            width: 50px;
+            height: auto;
+            transition: transform 0.2s ease-in-out;
+            object-fit: cover;
+        }
+
+        .redes ul li img:hover {
+            transform: scale(1.1);
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input,
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        footer {
+            background-color: rgb(6, 135, 110);
+            margin-top: 30px;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-copyright p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-redes {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-redes img {
+            width: 25px;
+            height: 25px;
+            transition: transform 0.2s ease;
+        }
+
+        .footer-redes img:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            main{
+                padding: 20px; 
+            }
+            .container {
+                flex-direction: column;
+            }
+
+            /* article, aside{
+                width: 100vw;
+            } */
+
+            .articulos,
+            .sidebar {
+                flex: 1 1 100%;
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="posteos.html">Posteos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="../index.html">Linktree</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="articulos">
+            <article>
+                <h1>Mi recorrido por Argentina: de la Costa Atlántica a las sierras y montañas</h1>
+                <p><time datetime="2025-06-07">7 de junio de 2025 por Santiago Petroselli</time></p>
+                
+                <p>Desde que mi papá se fue a vivir a Uruguay a mediados de 2022, empezamos a ir bastante seguido con mi mamá y mi hermana así no está solo. Estamos en un departamento en Pocitos, un barrio que se siente muy tranquilo pero con vida, ideal para caminar, tomar algo en la rambla o simplemente ver el atardecer frente al río.</p>
+
+                <h2>Montevideo</h2>
+                <p>Montevideo en general me sorprendió para bien. Tiene una mezcla de ciudad capital con ritmo calmo. Recorrimos varias veces el centro histórico, con sus edificios antiguos, cafés con historia y calles empedradas. También fuimos al Shopping Montevideo y al Punta Carretas, que tienen un estilo moderno pero sin perder la identidad local. <br>
+                Algo que me encantó es cómo se vive la costa. Desde Pocitos hasta Carrasco, la rambla es un espacio que se disfruta en todo momento del día, ya sea para andar en bici, correr, tomar mate o simplemente mirar el mar.</p>
+                <img src="Imagenes/montevideo.png" alt="Montevideo">
+
+                <h2>San Carlos</h2>
+                <p>Pero no todo fue ciudad: también tuvimos la suerte de quedarnos en algunas chacras en San Carlos, cerca de Punta del Este. Estar rodeado de naturaleza, caballos, cielos estrellados y un silencio total fue un contraste hermoso con la ciudad. Es otro ritmo, otra energía, y te hace valorar lo simple.</p>
+                <img src="Imagenes/chacrasancarlos.jpg" alt="Chacra San Carlos">
+                <p>Uruguay ya se volvió una parte importante de mi historia, y cada viaje suma recuerdos nuevos. Tiene ese equilibrio justo entre lo urbano, lo natural y lo humano que lo hace especial.</p>
+                
+                <a class="button" href="españa.html">Anterior</a> <a class="button" href="comidaespaña.html">Siguiente</a>
+            </article>
+        </section>
+
+        <aside class="sidebar">
+            <div class="perfil">
+                <h2>Escrito por: Santiago Petroselli</h2>
+                <img src="Imagenes/avatar.jpg" alt="Avatar">
+                <p>Soy un simple chico de 20 años, estudiante de Negocios Digitales, emprendedor, ¡y apasionado por los viajes y comida! En este blog te cuento mis experiencias en cada lugar y mis recomendaciones.</p>
+            </div>
+
+            <div class="redes">
+                <h2>Redes y Emprendimiento</h2>
+                <ul>
+                    <li><a href="https://atthemis.com/" target="_blank" style="text-decoration: none;">
+        <img src="Imagenes/Atthemis.png" alt="Icono de Atthemis"></a></li>
+                    <li><a href="https://www.instagram.com/santi_petroselli/" target="_blank" style="text-decoration: none;">
+        <img src="Imagenes/Instagram.png" alt="Icono de Instagram"></a></li>
+                    <li><a href="https://www.linkedin.com/in/santiago-petroselli/" target="_blank" style="text-decoration: none;">
+        <img src="Imagenes/Linkedin.png" alt="Icono de LinkedIn"></a></li>
+                </ul>
+            </div>
+
+            <div class="suscripcion">
+                <h2>Uníte a la Newsletter</h2>
+                <p>Hacete parte de nuestra comunidad si querés tener novedades de viajes, recomendaciones de lugares ¡y más!</p>
+                <form action="/submit" method="post">
+                    <input id="nombre" type="text" placeholder="Nombre" required>
+                    <input id="email" type="email" placeholder="Email" required>
+                    <select name="genero" id="genero" required>
+                        <option value="" disabled selected>Género</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <button type="submit">Suscribirme</button>
+                </form>
+            </div>
+
+            <div class="posteos">
+                <ul>
+                    <li><a href="argentina.html">Argentina: Playas, Montañas y Aventuras</a></li>
+                    <li><a href="españa.html">España: ¿vale la pena?</a></li>
+                    <li><a href="uruguay.html">Uruguay: Chiquito y Acogedor</a></li>
+                    <li><a href="comidaespaña.html">Guía Gastronómica de España</a></li>
+                    <li><a href="comidauruguay.html">Guía Gastronómica de Uruguay</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-copyright">
+            <p>Hecho por Santiago Petroselli — © 2025</p>
+        </div>
+        <div class="footer-redes">
+            <a href="https://www.instagram.com/santi_petroselli/" target="_blank">
+            <img src="Imagenes/Instagram.png" alt="Icono de Instagram"></a>
+            <a href="https://www.linkedin.com/in/santiago-petroselli/" target="_blank">
+            <img src="Imagenes/Linkedin.png" alt="Icono de LinkedIn"></a>
+        </div>
+    </footer>
+
+</body>
+</html>

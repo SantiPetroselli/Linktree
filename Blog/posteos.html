@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="Icono/icono.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: rgb(6, 135, 110);
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #009688;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .articulos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            flex: 1 1 100%;
+        }
+
+        article {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(168, 168, 168);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        article .button {
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+
+        article h1 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #222;
+            height: 7rem;
+        }
+
+        article img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+
+        article p {
+            margin-bottom: 15px;
+        }
+
+        article hr {
+            border: none;
+            border-top: 1px solid #eee;
+        }
+
+        .button,
+        button {
+            background-color: rgb(6, 135, 110);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover,
+        button:hover {
+            background-color: #00796b;
+        }
+
+        .sidebar div {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(168, 168, 168);
+        }
+
+        .sidebar img {
+            width: 150px;       
+            height: 150px;      
+            border-radius: 50%; 
+            object-fit: cover;  
+        }
+        
+        .sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .sidebar p {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #009688;
+            font-weight: 500;
+        }
+
+        .sidebar hr {
+            margin-top: 15px;
+            border: none;
+            border-top: 1px solid #eee;
+        }
+
+        .redes ul {
+            list-style: none;
+            padding: 0;
+            display: flex;          
+            gap: 15px;
+        }
+
+        .redes ul li {
+            display: inline-block;
+        }
+
+        .redes ul li img {
+            width: 50px;
+            height: auto;
+            transition: transform 0.2s ease-in-out;
+            object-fit: cover;
+        }
+
+        .redes ul li img:hover {
+            transform: scale(1.1);
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input,
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        footer {
+            background-color: rgb(6, 135, 110);
+            margin-top: 30px;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-copyright p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .footer-redes {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-redes img {
+            width: 25px;
+            height: 25px;
+            transition: transform 0.2s ease;
+        }
+
+        .footer-redes img:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            main{
+                padding: 20px; 
+            }
+            .container {
+                flex-direction: column;
+            }
+
+            .articulos,
+            .sidebar {
+                flex: 1 1 100%;
+            }
+
+            article h1 {
+            height: 8rem;
+        }
+
+            nav ul {
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="posteos.html">Posteos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="../index.html">Linktree</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="articulos">
+            <article>
+                <h1>Argentina: Playas, Montañas y Aventuras</h1>
+                <time datetime="2025-05-30">30 de mayo de 2025</time>
+                <img src="Imagenes/argentina-portada.jpg" alt="Bandera de Argentina">
+                <p>Desde las playas de la Costa Atlántica hasta los paisajes serranos de Tandil y Merlo, recorrí algunos de los lugares más lindos de la Argentina. En este post te cuento mi experiencia, con recomendaciones, fotos y lo que más disfruté de cada destino.</p>
+                <a class="button" href="argentina.html">Leer más</a>
+            </article>
+            <article>
+                <h1>Islas Baleares y la Península, ¿vale realmente la pena viajar a España?</h1>
+                <time datetime="2025-06-04">4 de junio de 2025</time>
+                <img src="Imagenes/españa-portada.jpg" alt="Bandera de España">
+                <p>Estuve en lugares como Barcelona, Madrid, Granada, Mallorca e Ibiza. En este artículo te cuento si estos lugares son tan buenos como parecen.</p>
+                <a class="button" href="españa.html">Leer más</a>
+            </article>
+            <article>
+                <h1>Uruguay: Chiquito y Acogedor</h1>
+                <time datetime="2025-06-07">7 de junio de 2025</time>
+                <img src="Imagenes/uruguay-portada.jpg" alt="Bandera de Uruguay">
+                <p>Uruguay ya es parte de mi historia: ciudad, costa y campo.</p>
+                <a class="button" href="uruguay.html">Leer más</a>
+            </article>
+            <article>
+                <h1>Guía Gastronómica de España: lo mejor que comí en cada ciudad</h1>
+                <time datetime="2025-06-08">8 de junio de 2025</time>
+                <img src="Imagenes/comida-esp-portada.jpg" alt="Can Joan de S'Aigo">
+                <p>Tapas, bocatas y chocolate caliente: un recorrido por los sabores que más me marcaron en España.</p>
+                <a class="button" href="comidaespaña.html">Leer más</a>
+            </article>
+            <article>
+                <h1>Uruguay: ¿Qué lugares probar si o si cuando vayas?</h1>
+                <time datetime="2025-06-08">8 de junio de 2025</time>
+                <img src="Imagenes/comida-uru-portada.jpg" alt="Ramona">
+                <p>Comer sin gluten en Montevideo es más fácil (y rico) de lo que parece. Mis lugares favoritos para disfrutar sin TACC y sin preocupaciones.</p>
+                <a class="button" href="comidauruguay.html">Leer más</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-copyright">
+            <p>Hecho por Santiago Petroselli — © 2025</p>
+        </div>
+        <div class="footer-redes">
+            <a href="https://www.instagram.com/santi_petroselli/" target="_blank">
+            <img src="Imagenes/Instagram.png" alt="Icono de Instagram"></a>
+            <a href="https://www.linkedin.com/in/santiago-petroselli/" target="_blank">
+            <img src="Imagenes/Linkedin.png" alt="Icono de LinkedIn"></a>
+        </div>
+    </footer>
+
+</body>
+</html>

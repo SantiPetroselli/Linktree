@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto</title>
+  <link rel="icon" href="Icono/icono.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    main.container{
+      margin: auto;
+    }
+
+    nav {
+      background-color: rgb(6, 135, 110);
+      padding: 20px 0;
+      margin-bottom: 30px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #009688;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgb(168, 168, 168);
+    }
+
+    .container p {
+            margin-bottom: 15px;
+        }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.8rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input,
+    textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background-color: rgb(6, 135, 110);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #00796b;
+    }
+
+    footer {
+        background-color: rgb(6, 135, 110);
+        margin-top: 30px;
+        color: white;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-copyright p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .footer-redes {
+        display: flex;
+        gap: 15px;
+    }
+
+    .footer-redes img {
+        width: 25px;
+        height: 25px;
+        transition: transform 0.2s ease;
+    }
+
+    .footer-redes img:hover {
+        transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="posteos.html">Posteos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="../index.html">Linktree</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h1>Contacto</h1>
+    <p>Llená el formulario y dejame tu mensaje, te voy a responder lo antes posible.</p>
+    <form action="/submit" method="post">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu correo electrónico" required />
+      <textarea name="mensaje" placeholder="Escribí tu mensaje..." required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+  </main>
+
+  <footer>
+      <div class="footer-copyright">
+          <p>Hecho por Santiago Petroselli — © 2025</p>
+      </div>
+      <div class="footer-redes">
+          <a href="https://www.instagram.com/santi_petroselli/" target="_blank">
+          <img src="Imagenes/Instagram.png" alt="Icono de Instagram"></a>
+          <a href="https://www.linkedin.com/in/santiago-petroselli/" target="_blank">
+          <img src="Imagenes/Linkedin.png" alt="Icono de LinkedIn"></a>
+      </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+h1, h2, h3, a, p, tr{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+footer{
+    background-color: rgb(6, 135, 110);
+    height: 50px;
+    padding: 5px;
+    color: white;
+}
+.horaydia{
+    background-color: royalblue;
+    color: white;
+    text-align: center;
+}
+.materia{
+    background-color: red;
+    color: white;
+}
+.entrenamiento{
+    background-color: lightgreen;
+    color: white;
+}
+.trabajo{
+    background-color: gray;
+    color: white;
+}
+.descanso{
+    background-color:rgb(222, 8, 193);
+    color: white;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+.pag{
+    display: inline-block;
+}
+.lista li a {
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    background-color: rgb(6, 135, 110);
+    text-decoration: none;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    width: 90%;
+}
+.lista ul {
+    padding: 0;
+  }
+.spotifylista{
+    padding-top: 25px;
+}
+.cancion{
+    align-content: center;
+}
+section h1{
+    color: white;
+}
+
+
+nav{
+    padding: 10px;
+    text-align: center;
+}
+.navegador{
+    background-color: rgb(6, 135, 110);
+    text-align: center;
+    height: 30px;
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-nav {
+    background-color: rgb(6, 135, 110); 
+    padding: 10px 0;
+}
+  
+.menu-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+  
+.menu-nav li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+  
+.menu-nav li a:hover {
+    color: #c4c4c4;
+}
+  
