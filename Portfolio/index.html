@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="icon" href="Imagenes/portfolio.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<div class="modal-cv" id="cvModal">
+    <span class="close-cv" onclick="cerrarCv()">×</span>
+    <iframe src="Santiago Petroselli - Curriculum Vitae.pdf"></iframe>
+</div>
+
+<body>
+
+<header>
+    <h1>Santiago Petroselli</h1>
+    <nav class="nav-principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre-mi">Sobre Mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#contacto">Contacto</a>
+    <a href="../index.html">Linktree</a>
+    </nav>
+    <span class="menu-icono" onclick="openNav()">☰</span>
+</header>
+
+    <div id="navResponsive" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <a href="#inicio" onclick="closeNav()">Inicio</a>
+        <a href="#sobre-mi" onclick="closeNav()">Sobre Mí</a>
+        <a href="#proyectos" onclick="closeNav()">Proyectos</a>
+        <a href="#habilidades" onclick="closeNav()">Habilidades</a>
+        <a href="#contacto" onclick="closeNav()">Contacto</a>
+        <a href="../index.html" onclick="closeNav()">Linktree</a>
+    </div>
+    </div>
+
+    <div id="inicio" class="hero">
+        <h2 style="font-size: 5rem;">Mi Portfolio</h2>
+        <p style="font-size: 1.7rem;">Soy estudiante de Negocios Digitales. En este sitio te muestro mis proyectos y habilidades.</p>
+        <a href="#sobre-mi" class="flecha-abajo">↓</a>
+    </div>
+
+    <section id="sobre-mi">
+    <h2>Sobre Mí</h2>
+    <div class="sobre-mi-contenido">
+        <div class="sobre-mi-texto">
+        <p>¡Hola! Soy Santiago Petroselli, me apasiona todo lo que tenga que ver con tecnología, internet y cómo funciona lo que vemos online. Me encanta el Desarrollo Web, SEO y Análisis de Datos para entender cómo mejorar cada proyecto.<br>
+        Siempre intento aprender cosas nuevas y buscar maneras de aplicar ese conocimiento en el mundo real.</p>
+        <div id="curriculum">
+            <button class="cv" onclick="abrirCv()">🗎 Ver CV</button>
+        </div>
+        </div>
+        <div class="sobre-mi-imagen">
+        <img src="Imagenes/avatar.jpg" alt="Foto de Santiago Petroselli" />
+        </div>
+    </div>
+    </section>
+
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="container-proyectos">
+            <div class="proyecto" onclick="abrirModal('Calculadora', '')">🔢 Calculadora</div>
+            <div class="proyecto" onclick="abrirModal('Lista de Tareas')">📝 Lista de Tareas</div>
+            <div class="proyecto" onclick="abrirModal('Galería')">🖼️ Galería</div>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">Diseño Responsive</div>
+            <div class="skill">GitHub</div>
+            <div class="skill">Google Analytics</div>
+            <div class="skill">SEO</div>
+            <div class="skill">Power BI</div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p style="text-align: center">Llená el formulario y dejame tu mensaje, te voy a responder lo antes posible.</p>
+        <form action="/submit" method="post">
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+            <input type="email" name="email" placeholder="Tu correo electrónico" required />
+            <textarea name="mensaje" placeholder="Escribí tu mensaje..." required></textarea>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-copyright">
+            <p>Hecho por Santiago Petroselli — © 2025</p>
+        </div>
+        <div class="footer-redes">
+            <a href="https://www.instagram.com/santi_petroselli/" target="_blank">
+            <img src="Imagenes/Instagram.png" alt="Icono de Instagram"></a>
+            <a href="https://www.linkedin.com/in/santiago-petroselli/" target="_blank">
+            <img src="Imagenes/Linkedin.png" alt="Icono de LinkedIn"></a>
+        </div>
+    </footer>
+
+    <div class="modal" id="proyectoModal">
+        <div class="contenido-modal">
+            <span class="close-cv" onclick="cerrarModal()">&times;</span>
+            <h3 id="tituloModal">Título del Proyecto</h3>
+            <p id="descripcionModal">Descripción extendida del proyecto.</p>
+            <div id="listaTareasContainer" style="display: none;">
+            <div class="input-container">
+                <input type="text" id="nuevaTarea" placeholder="Añade una nueva tarea...">
+                <button id="agregar">Agregar</button>
+            </div>
+            <ul class="lista-tareas" id="listaTareas">
+                <li class="cargando">Cargando tareas...</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
