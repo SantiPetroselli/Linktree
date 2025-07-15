@@ -33,9 +33,14 @@ nav li{
 }
 
 nav a{
-    padding: 10px 100px;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    padding: 10px 0;
     background-color: rgb(152, 255, 0);
     border-radius: 20px;
+    text-decoration: none;
+    color: black;
 }
 
 .redes ul{
