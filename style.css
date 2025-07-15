@@ -1,0 +1,66 @@
+body{
+    background-image: url("Imagenes/fondo.jpg");
+    background-size: cover;
+}
+
+header{
+    text-align: center;
+}
+
+h1, h2, h3, a, p, tr{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+img{
+    width: 200px;
+    border-radius: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+header ul li {
+    display: inline;
+}
+
+nav{
+    text-align: center;
+    margin-top: 50px;
+}
+
+nav li{
+    margin-bottom: 30px;   
+}
+
+nav a {
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgb(152, 255, 0);
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.redes ul{
+    list-style: none;
+    padding: 0;
+    display: flex;          
+    gap: 15px;
+}
+
+.redes ul li {
+    display: inline-block;
+}
+
+.redes img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+    object-fit: cover;
+}
+
+.redes img:hover {
+    transform: scale(1.1);
+}
